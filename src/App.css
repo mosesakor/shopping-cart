@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    padding: 0 50px;
+    overflow-x: hidden; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+    list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.test {
+    background: pink;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.full__window {
+    background: orange;
 }
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    width: 95%;
+    align-items: center;
+    background: white;
+    padding:7px;
+
+}
+
+
+.nav__links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+nav .burger {
+    display: none
+}
+
+nav .logo {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: auto;
+}
+
+nav .nav-links {
+    font-size: 15px;
+    display: flex;
+    margin-top: 10px;
+}
+
+.nav-links li {
+    padding: 0px 10px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+nav .nav-links a:hover {
+    border-bottom: 1px solid black;
+}
+
+
+@media all and (max-width: 768px) {
+    .logo {
+        margin: auto;
+    }
+
+    nav .burger {
+        font-size: 20px;
+        display: block;
+    }
+
+    nav {
+        padding: 10px;
+        padding-left: 30px;
+    /*    background: yellow; */
+  
+    }
+
+    nav .nav-links {
+        position: fixed;
+        display: block;
+        top: 10%;
+        height: 28vh;
+        width: 98%;
+        transform: translateY(-1000px);
+        transition: 60ms ease;
+    }
+
+}
+
+/*
+
+*/
+
+/* Clothing.css */
+
+.clothing {
+    display: grid;
+    grid: auto / repeat(4, 1fr);
+    grid-template-areas:
+         "header header header header"
+         "sidebar products products products"
+         "sidebar products products products"
+         "sidebar products products products"
+         "footer footer footer footer";
+    grid-gap: 20px;
+}
+
+.products {
+    max-width: 90%;
+    grid-area: products;
+    display: grid;
+    grid: 400px 400px 400px auto / repeat(3, 1fr);
+    grid-template-areas:
+        "products products products products"
+        "products products products products"
+        "products products products";
+    grid-gap: 20px;
+}
+
+.clothing__header {
+    grid-area: header;
+}
+
+.clothing__aside {
+    grid-area: sidebar;
+}
+
+.clothing__footer {
+    grid-area: footer
+}
+
+link:hover {
+    text-decoration: none;
+}
+
+.products div {
+    /*background: yellow;*/
+}
+
+.img {
+    height: 289px;
+    width: 289px;
+}
+
+link:hover {
+    text-decoration: none;
+
+}
+
+/*
+@media (min-width: 300px) {
+    .products { grid: auto / repeat( 1fr); }
+}
+
+@media (min-width: 900px) {
+    .products { grid: auto / repeat(2, 1fr);
+    grid-template-aeas: }
+}
+
+@media (min-width: 1200px) {
+    .products { grid: auto / repeat(2, 1fr); }
+}
+*/
+
+/*
+.products {
+    max-width: 90%;
+    grid-area: products;
+    display: grid;
+    grid: 400px 400px 400px  auto / repeat(3, 1fr);
+    grid-template-areas:
+        "products products products"
+        "products products products"
+        "products products products";
+    grid-gap: 20px;
+} 
+*/
+
+/*
+.clothing {
+    display: grid;
+    grid: auto / repeat(4, 1fr);
+    grid-template-areas:
+         "header header header header"
+         "sidebar products products products"
+         "sidebar products products products"
+         "sidebar products products products"
+         "footer footer footer footer";
+    grid-gap: 20px;
+}
+*/

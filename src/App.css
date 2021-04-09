@@ -1,210 +1,204 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    padding: 0 50px;
-    overflow-x: hidden; 
-}
 
-li {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.test {
-    background: pink;
-}
-
-.full__window {
-    background: orange;
-}
 
 nav {
-    position: fixed;
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-areas: 
+    "burger logo"
+    "links links";
+    overflow: hidden;
+    font-size: 2rem;
+    background-color: white;
+    text-align: left;
+    position: sticky;
     top: 0;
-    width: 95%;
-    align-items: center;
-    background: white;
-    padding:7px;
-
-}
-
-
-.nav__links {
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-
-nav .burger {
-    display: none
-}
-
-nav .logo {
-    font-size: 22px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-right: auto;
-}
-
-nav .nav-links {
+    padding: 10px;
     font-size: 15px;
-    display: flex;
-    margin-top: 10px;
 }
 
-.nav-links li {
-    padding: 0px 10px;
+nav ul {
 }
 
-nav .nav-links a {
+
+
+
+nav ul, nav ul a {
+    list-style-type: none;
     text-decoration: none;
     color: black;
+/* justify-content: space-around; */
 }
 
-nav .nav-links a:hover {
-    border-bottom: 1px solid black;
+.burger {
+    grid-area: burger;
+    font-size: 25px;
+    margin-left: 10px;
 }
 
 
-@media all and (max-width: 768px) {
-    .logo {
-        margin: auto;
-    }
-
-    nav .burger {
-        font-size: 20px;
-        display: block;
-    }
-
-    nav {
-        padding: 10px;
-        padding-left: 30px;
-    /*    background: yellow; */
-  
-    }
-
-    nav .nav-links {
-        position: fixed;
-        display: block;
-        top: 10%;
-        height: 28vh;
-        width: 98%;
-        transform: translateY(-1000px);
-        transition: 60ms ease;
-    }
-
+.logo {
+    grid-area: logo;
 }
-
-/*
-
-*/
-
-/* Clothing.css */
 
 .clothing {
-    display: grid;
-    grid: auto / repeat(4, 1fr);
-    grid-template-areas:
-         "header header header header"
-         "sidebar products products products"
-         "sidebar products products products"
-         "sidebar products products products"
-         "footer footer footer footer";
-    grid-gap: 20px;
+    height: 200vh;
 }
 
-.products {
-    max-width: 90%;
-    grid-area: products;
-    display: grid;
-    grid: 400px 400px 400px auto / repeat(3, 1fr);
-    grid-template-areas:
-        "products products products products"
-        "products products products products"
-        "products products products";
-    grid-gap: 20px;
+nav ul {
+    grid-area: links;
+}
+    
+nav ul li {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-bottom: 1px solid #f1f1f1;
+
 }
 
-.clothing__header {
-    grid-area: header;
-}
-
-.clothing__aside {
-    grid-area: sidebar;
-}
-
-.clothing__footer {
-    grid-area: footer
-}
-
-link:hover {
+nav ul li:hover, nav ul a:hover {
+    color: black;
     text-decoration: none;
+    flex: auto;
 }
 
-.products div {
-    /*background: yellow;*/
+h1 {
+    height: 200vh;
 }
 
 .img {
-    height: 289px;
-    width: 289px;
+    height: 285px;
+    width: 285px;
 }
 
-link:hover {
-    text-decoration: none;
-
-}
-
-/*
-@media (min-width: 300px) {
-    .products { grid: auto / repeat( 1fr); }
-}
-
-@media (min-width: 900px) {
-    .products { grid: auto / repeat(2, 1fr);
-    grid-template-aeas: }
-}
-
-@media (min-width: 1200px) {
-    .products { grid: auto / repeat(2, 1fr); }
-}
-*/
-
-/*
 .products {
-    max-width: 90%;
-    grid-area: products;
+    margin-top: 20px;
     display: grid;
-    grid: 400px 400px 400px  auto / repeat(3, 1fr);
-    grid-template-areas:
-        "products products products"
-        "products products products"
-        "products products products";
-    grid-gap: 20px;
-} 
-*/
+    grid-gap: .5rem;
+    text-align: center;
+}
+
+.a__product, .a__product img {
+    margin: 0 auto;
+}
 
 /*
-.clothing {
-    display: grid;
-    grid: auto / repeat(4, 1fr);
-    grid-template-areas:
-         "header header header header"
-         "sidebar products products products"
-         "sidebar products products products"
-         "sidebar products products products"
-         "footer footer footer footer";
-    grid-gap: 20px;
-}
+  Clothing.css
 */
+
+.clothing__aside {
+    display: none;
+}
+
+
+@media all and (min-width: 480px) {
+
+    .products {
+        margin-top: 20px;
+        display: grid;
+        grid-gap: 2rem;
+    }
+
+    .a__product {
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media all and (min-width: 768px) {
+
+    nav {
+
+    }
+    nav ul {
+    
+    }
+    nav ul li {
+
+    }
+
+    .products {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 2rem;
+    }
+
+    .a__product {
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media all and (min-width: 1024px) {
+    
+    .products {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 1rem;
+    }
+
+    .a__product {
+        margin-bottom: 20px;
+    }
+}
+
+@media all and (min-width: 1100px) {
+    .burger {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: none;
+        background: red;
+    }
+
+    nav ul {
+        display: flex;
+        background: yellow;
+    }
+
+    nav ul li {
+        border-bottom: none;
+        margin-right: 20px;
+        border-bottom:3px solid transparent;
+    }
+
+    nav ul li:hover {
+        border-bottom:3px solid black;
+    }
+
+    .zig {
+        display: flex;
+    }
+    
+    .products {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 2rem;
+    }
+
+    .a__product {
+        margin-bottom: 20px;
+    }
+
+    .bag {
+        font-size: 55px;
+        background-color: green;
+    }
+    
+}
+
+
+
+
+

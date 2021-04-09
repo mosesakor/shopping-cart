@@ -79,3 +79,218 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
          "sidebar products products products"
          "footer footer footer footer";
     grid-gap: 20px;
+
+
+    style={{transform: open ? "translateX(0px)" : "translateX(-1000px"}}
+
+/*
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+li {
+    list-style-type: none;
+}ds
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.nav-wrapper {
+}
+
+nav {
+    display: grid;
+    overflow: hidden;
+    position: fixed;
+    top: 0; /* Set the navbar to fixed position */
+     /* Position the navbar at the top of the page */
+    width: 95%; /* Full width */
+    background: green;
+    padding: 7px;
+}
+
+.burger {
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 2000s ease-in-out;
+}
+
+nav .nav-links {
+    font-size: 15px;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    background: blue;
+}
+
+.nav-links li {
+    padding: 0px 2px;
+    width: 100%;
+}
+
+nav .nav-links a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+nav .nav-links a:hover {
+    border-bottom: 1px solid black;
+}
+
+
+/*
+@media all and (max-width: 768px) {
+    .logo {
+        margin: auto;
+    }
+
+    nav .burger {
+        font-size: 20px;
+        display: block;
+    }
+
+    nav {
+        padding: 10px;
+        padding-left: 30px;
+    background: yellow;
+  
+    }
+
+    nav .nav-links {
+        position: fixed;
+        display: block;
+        top: 10%;
+        height: 28vh;
+        width: 98%;
+        transform: translateY(-1000px);
+        transition: 60ms ease;
+    }
+
+}
+ 
+*/
+
+/*
+
+*/
+
+/* Clothing.css */
+
+.clothing {
+
+}
+
+.clothing__aside {
+    display: none;
+}
+
+.products {
+    margin-top: 20px;
+    display: grid;
+    grid-auto-rows: mixmax(125px, auto);
+    grid-gap: .5rem;
+}
+
+.a__product, .a__product img {
+    margin: 0 auto;
+}
+
+
+.clothing__header {
+    grid-area: header;
+}
+
+.clothing__aside {
+    grid-area: sidebar;
+}
+
+.clothing__footer {
+    grid-area: footer
+}
+
+link:hover {
+    text-decoration: none;
+}
+
+.products div {
+    /*background: yellow;*/
+}
+
+.img {
+    height: 289px;
+    width: 289px;
+}
+
+link:hover {
+    text-decoration: none;
+
+}
+
+/*
+@media (min-width: 300px) {
+    .products { grid: auto / repeat( 1fr); }
+}
+
+@media (min-width: 900px) {
+    .products { grid: auto / repeat(2, 1fr);
+    grid-template-aeas: }
+}
+
+@media (min-width: 1200px) {
+    .products { grid: auto / repeat(2, 1fr); }
+}
+*/
+
+/*
+.products {
+    max-width: 90%;
+    grid-area: products;
+    display: grid;
+    grid: 400px 400px 400px  auto / repeat(3, 1fr);
+    grid-template-areas:
+        "products products products"
+        "products products products"
+        "products products products";
+    grid-gap: 20px;
+} 
+*/
+
+/*
+.clothing {
+    display: grid;
+    grid: auto / repeat(4, 1fr);
+    grid-template-areas:
+         "header header header header"
+         "sidebar products products products"
+         "sidebar products products products"
+         "sidebar products products products"
+         "footer footer footer footer";
+    grid-gap: 20px;
+}
+*/
+
+
+style={{display: open ? "none" : "block"}

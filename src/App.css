@@ -23,6 +23,11 @@ nav {
 }
 
 nav ul {
+    display: none;
+}
+
+.toggle {
+    display: block !important;
 }
 
 
@@ -39,6 +44,26 @@ nav ul, nav ul a {
     grid-area: burger;
     font-size: 25px;
     margin-left: 10px;
+}
+
+.bag_container {
+    margin-top: 10px;
+    font-size: 5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: blue;
+    padding: 10px;
+}
+
+.bag_container i {
+    font-size: 25px;
+}
+
+.bag_container p {
+    display: inline;
+    font-size: 15px;
+    margin-left: 5px;
 }
 
 
@@ -93,6 +118,10 @@ h1 {
 
 .clothing__aside {
     display: none;
+}
+
+.item {
+    cursor: pointer;
 }
 
 
@@ -164,6 +193,7 @@ h1 {
     nav ul {
         display: flex;
         background: yellow;
+        margin-right: 50px;
     }
 
     nav ul li {
@@ -192,8 +222,8 @@ h1 {
     }
 
     .bag {
-        font-size: 55px;
-        background-color: green;
+        font-size: 40px;
+
     }
     
 }

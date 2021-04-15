@@ -12,6 +12,7 @@ import Product from "./components/Product"
 import Clothing from "./components/Clothing"
 import Contact from "./components/Contact"
 import Navbar from "./components/Navbar/Navbar"
+import Item from "./components/Item"
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -37,6 +38,9 @@ export default function BasicExample() {
               </Route>
               <Route path="/product">
                 <Product />
+              </Route>
+              <Route path="/clothing/:id">
+                <Item />
               </Route>
               <Route path="/clothing">
                 <Clothing />

@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,17 +6,27 @@ import {
   Link
 } from "react-router-dom";
 
+import clothing from "../Clothing"
+
 export default function NavBar() {
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
+
 
   return (
-        <nav>
-          <i onClick={() => setOpen(!open)} className="fas fa-bars burger"></i>
+        <nav className="navigation">
+          <i onClick={handleToggle} className="fas fa-bars burger"></i>
+          <div className="bag_container">
+            <i className="fas fa-shopping-bag bag"></i>
+            <p>{}</p>
+          </div>
           <h2 className="logo">Niyah Classics</h2>
-          <ul className="nav-links" style={{display: open ? "none" : ""}}
-              
-          >
+          <ul className={open ? "nav-links" : "nav-links toggle"}>
            <li className="a_list">
              <Link to="/">Home</Link>
            </li>
@@ -33,9 +43,6 @@ export default function NavBar() {
               <Link to="/clothing">Clothing</Link>
             </li>
           </ul>
-          <i className="fas fa-shopping-bag bag"></i>
         </nav>
-
-    
   );
 }

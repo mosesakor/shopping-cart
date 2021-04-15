@@ -1,4 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Item from "./Item"
 
 import bag1 from './images/bags/bag1.jpg'
 import bag2 from './images/bags/bag2.jpg'
@@ -101,14 +109,17 @@ export default function Clothing() {
   const amountOfItems = (id) => cart.filter((item) => item.id === id).length;
 
   const listItemsToBuy = () => items.map((item) => (
-    <div key={item.id}>
-      <img src={item.img}></img>
-      <p>{`${item.brand}`}</p>
-      <p>{`${item.name}`}</p>
-      <p>£{`${item.price.toFixed(2)}`}</p>
-      <button type="submit" onClick={() => addToCart(item)}>Add</button>
-    </div>
+    <Link key={item.id} to={`/clothing/${item.id}`}>
+      <div key={item.id} className="item" onClick={() => addToCart(item)}>
+        <img src={item.img}></img>
+        <p>{`${item.brand}`}</p>
+        <p>{`${item.name}`}</p>
+        <p>£{`${item.price.toFixed(2)}`}</p>
+        <p>{`${cartTotal}`}</p>
+      </div>
+    </Link>
   ));
+
 
     return (
       <div className="clothing">

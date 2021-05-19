@@ -9,10 +9,12 @@ import {
 import Home from "./components/Home"
 import About from "./components/About"
 import Product from "./components/Product"
-import Clothing from "./components/Clothing"
+import Clothing from "./components/Bags"
 import Contact from "./components/Contact"
+import Cart from "./components/Cart"
 import Navbar from "./components/Navbar/Navbar"
 import Item from "./components/Item"
+import { CartProvider } from "./components/CartContext";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -26,41 +28,37 @@ import Item from "./components/Item"
 export default function BasicExample() {
   return (
     <Router>
-      <div className="full__window">
-          <Navbar />
-          <div className="test">
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route path="/product">
-                <Product />
-              </Route>
-              <Route path="/clothing/:id">
-                <Item />
-              </Route>
-              <Route path="/clothing">
-                <Clothing />
-              </Route>
-              <Route path="/contact">
-                <Contact />
-              </Route>
-            </Switch>
-      </div>
-
-
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
-
-      </div>
+      <CartProvider>
+        <div className="full__window">
+            <Navbar />
+            <div className="test">
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route path="/about">
+                  <About />
+                </Route>
+                <Route path="/product">
+                  <Product />
+                </Route>
+                <Route path="/clothing/:id">
+                  <Item />
+                </Route>
+                <Route path="/clothing">
+                  <Clothing />
+                </Route>
+                <Route path="/contact">
+                  <Contact />
+                </Route>
+                <Route path="/cart">
+                  <Cart />
+                </Route>
+              </Switch>
+            </div>
+        </div>
+      </CartProvider>
+      
     </Router>
   );
 }

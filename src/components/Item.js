@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDom from "react-dom";
 import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "./Item.css"
 import items from "./Items"
-import clothing from "./Clothing"
+import clothing from "./Bags"
+import { CartContext } from "./CartContext";
 
 export default function Item (props) {
 
-    console.log(props)
+    const [cart, setCart] = useContext(CartContext)
+
+    const addToCart = (item) => setCart((currentCart) => [...currentCart, item]);
+    
+
     const params = useParams();
     const id = params.id - 1
 
@@ -27,7 +32,7 @@ export default function Item (props) {
                 <p className="product_brand">{items[id].brand}</p>
                 <p className="product_name">{items[id].name}</p>
                 <p className="product_name">£{items[id].price}.00</p>
-                <button className="product_button">ADD TO CART</button>
+                <button className="product_button" onClick={() => addToCart(items[id])}>ADD TO CART</button>
             </div>
         </div>
     );

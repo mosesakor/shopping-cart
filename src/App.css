@@ -6,25 +6,30 @@
 }
 
 
-
-nav {
-    display: grid;
-    grid-template-areas: 
-    "burger logo"
-    "links links";
-    overflow: hidden;
-    font-size: 2rem;
-    background-color: white;
-    text-align: left;
-    position: sticky;
-    top: 0;
-    padding: 10px;
-    font-size: 15px;
+html {
+    overflow-x: hidden;
 }
 
-nav ul {
-    display: none;
+h5 {
+    margin-bottom: 0;
 }
+
+.an_item {
+    text-decoration: none;
+    color: black;
+}
+
+.an_item:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+.brand_name:hover {
+    color: #E10098;
+}
+
+
 
 .toggle {
     display: block !important;
@@ -33,38 +38,22 @@ nav ul {
 
 
 
-nav ul, nav ul a {
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
-/* justify-content: space-around; */
-}
-
 .burger {
     grid-area: burger;
-    font-size: 25px;
+    font-size: 15px;
     margin-left: 10px;
 }
 
-.bag_container {
-    margin-top: 10px;
-    font-size: 5px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background: blue;
-    padding: 10px;
-}
 
 .bag_container i {
-    font-size: 25px;
+
 }
 
 .bag_container p {
-    display: inline;
-    font-size: 15px;
-    margin-left: 5px;
+
 }
+
+
 
 
 .logo {
@@ -75,30 +64,27 @@ nav ul, nav ul a {
     height: 200vh;
 }
 
-nav ul {
-    grid-area: links;
-}
-    
-nav ul li {
-    cursor: pointer;
-    padding: 0.5rem;
-    border-bottom: 1px solid #f1f1f1;
 
-}
 
-nav ul li:hover, nav ul a:hover {
-    color: black;
-    text-decoration: none;
-    flex: auto;
-}
 
 h1 {
     height: 200vh;
 }
 
+.cart {
+    text-decoration: none;
+    color: black;
+    background: red; 
+}
+
+.cart:hover {
+    color: pink;
+}
+
+
 .img {
-    height: 285px;
-    width: 285px;
+    max-width: 200px;
+    height: auto;
 }
 
 .products {
@@ -141,15 +127,6 @@ h1 {
 
 @media all and (min-width: 768px) {
 
-    nav {
-
-    }
-    nav ul {
-    
-    }
-    nav ul li {
-
-    }
 
     .products {
         margin-top: 20px;
@@ -165,6 +142,10 @@ h1 {
 }
 
 @media all and (min-width: 1024px) {
+
+    .burger {
+        display: none;
+    }
     
     .products {
         margin-top: 20px;
@@ -176,24 +157,17 @@ h1 {
     .a__product {
         margin-bottom: 20px;
     }
-}
-
-@media all and (min-width: 1100px) {
-    .burger {
-        display: none;
-    }
 
     nav {
         display: flex;
         justify-content: space-between;
-        border-bottom: none;
-        background: red;
+
     }
 
     nav ul {
         display: flex;
-        background: yellow;
-        margin-right: 50px;
+        flex-basis: unset;
+        order: 2;
     }
 
     nav ul li {
@@ -205,6 +179,18 @@ h1 {
     nav ul li:hover {
         border-bottom:3px solid black;
     }
+}
+
+@media all and (min-width: 1400px) {
+    .burger {
+        display: none;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+
 
     .zig {
         display: flex;
@@ -230,5 +216,29 @@ h1 {
 
 
 
+/*
+    Navbar    
+*/
 
 
+
+/*
+
+.bag_container p {
+    display: inline;
+    font-size: 15px;
+    margin-left: 5px;
+*/
+
+/*
+
+.bag_container {
+    margin-top: 10px;
+    font-size: 5px;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    padding: 5px;
+    width: 100px;
+}
+*/

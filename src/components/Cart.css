@@ -1,0 +1,36 @@
+.cart_container {
+    display: flex;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    height: 130px;
+    width: 70%;
+    margin: 10px auto;
+    margin-top: 20px;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.cart_image {
+
+}
+
+.cart_image img {
+    height: 96px;
+    width: 96px;
+    margin-right: 20px;
+}
+
+.cart_info {
+    flex-grow: 3;
+}
+
+.item_total input {
+    width: 30px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.item_total button {
+    width: 30px;
+}
+
